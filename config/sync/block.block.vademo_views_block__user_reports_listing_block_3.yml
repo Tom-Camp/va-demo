@@ -1,4 +1,4 @@
-uuid: d98a817e-0a8c-4c0d-ae9b-a3a6f9dd51cc
+uuid: df7e5510-27cb-4bda-8910-268f51d276a3
 langcode: en
 status: true
 dependencies:
@@ -9,9 +9,9 @@ dependencies:
     - user
     - views
   theme:
-    - femagrants
-id: views_block__user_reports_listing_block_3
-theme: femagrants
+    - vademo
+id: vademo_views_block__user_reports_listing_block_3
+theme: vademo
 region: content
 weight: 0
 provider: null

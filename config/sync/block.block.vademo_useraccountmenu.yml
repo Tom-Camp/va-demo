@@ -1,4 +1,4 @@
-uuid: 268c59c8-9eb4-49a4-9c00-887d4fdc3101
+uuid: 0c8fe45d-13ca-4cb6-8c3c-53a51d240447
 langcode: en
 status: true
 dependencies:
@@ -7,10 +7,10 @@ dependencies:
   module:
     - system
   theme:
-    - femagrants
-id: useraccountmenu_2
-theme: femagrants
-region: mobile_menu
+    - vademo
+id: vademo_useraccountmenu
+theme: vademo
+region: secondary_menu
 weight: 0
 provider: null
 plugin: 'system_menu_block:account'

@@ -1,4 +1,4 @@
-uuid: 60926a9d-baff-4d73-a91a-b9fbf02864b3
+uuid: f97d3fa0-fdf9-40fb-a10f-e7077ba18826
 langcode: en
 status: true
 dependencies:
@@ -8,9 +8,9 @@ dependencies:
     - node
     - views
   theme:
-    - femagrants
-id: views_block__workflow_entity_history_block_1
-theme: femagrants
+    - vademo
+id: vademo_views_block__workflow_entity_history_block_1
+theme: vademo
 region: help
 weight: -7
 provider: null

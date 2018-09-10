@@ -1,15 +1,15 @@
-uuid: f044baf1-6d43-47fb-a1e6-9c445c85c479
+uuid: f04b3eab-00b8-42b0-9b20-83ef3a402e47
 langcode: en
 status: false
 dependencies:
   module:
     - user
   theme:
-    - femagrants
+    - vademo
 _core:
   default_config_hash: 4QlSnWBcxxKMIFRM8sbu_MjSkcp3NjGgnVrc-lynQHI
-id: femagrants_login
-theme: femagrants
+id: vademo_login
+theme: vademo
 region: sidebar_first
 weight: -7
 provider: null

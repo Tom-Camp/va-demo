@@ -1,13 +1,13 @@
-uuid: 4f3497c4-0075-403d-b887-9aef65985071
+uuid: 8f15b3de-a0cc-4b9c-abbe-b842280ba0f0
 langcode: en
 status: true
 dependencies:
   module:
     - workflow
   theme:
-    - femagrants
-id: workflowtransitionform_2
-theme: femagrants
+    - vademo
+id: vademo_workflowtransitionform_2
+theme: vademo
 region: sidebar_second
 weight: 0
 provider: null

@@ -1,4 +1,4 @@
-uuid: a1ad4588-7365-404b-82f3-edd4cb769ef9
+uuid: 1210ba4b-e10b-4b43-9d04-247a25dfccee
 langcode: en
 status: true
 dependencies:
@@ -7,9 +7,9 @@ dependencies:
   module:
     - system
   theme:
-    - femagrants
-id: footer
-theme: femagrants
+    - vademo
+id: vademo_footer
+theme: vademo
 region: footer_secondary
 weight: 0
 provider: null

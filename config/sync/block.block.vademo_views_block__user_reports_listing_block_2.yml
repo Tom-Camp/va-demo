@@ -1,4 +1,4 @@
-uuid: de72c4e5-0cd7-4751-8485-002ee6b5bc42
+uuid: 8c059ff9-db2a-437d-9c01-e550462e8321
 langcode: en
 status: true
 dependencies:
@@ -9,20 +9,21 @@ dependencies:
     - user
     - views
   theme:
-    - femagrants
-id: views_block__user_reports_listing_block_1
-theme: femagrants
+    - vademo
+id: vademo_views_block__user_reports_listing_block_2
+theme: vademo
 region: content
 weight: 0
 provider: null
-plugin: 'views_block:user_reports_listing-block_1'
+plugin: 'views_block:user_reports_listing-block_2'
 settings:
-  id: 'views_block:user_reports_listing-block_1'
+  id: 'views_block:user_reports_listing-block_2'
   label: ''
   provider: views
-  label_display: visible
+  label_display: '0'
   views_label: ''
   items_per_page: none
+  context_mapping: {  }
 visibility:
   request_path:
     id: request_path
@@ -33,6 +34,7 @@ visibility:
     id: user_role
     roles:
       analyst: analyst
+      specialist: specialist
     negate: false
     context_mapping:
       user: '@user.current_user_context:current_user'
