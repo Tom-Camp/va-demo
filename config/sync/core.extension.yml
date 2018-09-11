@@ -16,7 +16,6 @@ module:
   default_content: 0
   dynamic_page_cache: 0
   editor: 0
-  fema_federal_financial_report: 0
   field: 0
   field_group: 0
   field_ui: 0
