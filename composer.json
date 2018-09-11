@@ -40,7 +40,7 @@
         "drupal/chosen": "^2.4",
         "drupal/computed_field": "^2.0@alpha",
         "drupal/console": "^1.0.2",
-        "drupal/core": "~8.4",
+        "drupal/core": "^8.6",
         "drupal/default_content": "^1.0@alpha",
         "drupal/drupal-extension": "~3.0",
         "drupal/field_group": "3.0-beta1",

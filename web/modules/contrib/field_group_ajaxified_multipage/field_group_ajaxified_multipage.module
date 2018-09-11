@@ -296,7 +296,7 @@ function field_group_ajaxified_multipage_form_alter(&$form, &$form_state, $form_
       ];
     }
 
-    $form['actions']['preview'] ? $form['actions']['preview']['#weight'] = 22 : NULL;
+    (isset($form['actions']['preview']) && $form['actions']['preview']) ? $form['actions']['preview']['#weight'] = 22 : NULL;
     $form['actions']['submit'] ? $form['actions']['submit']['#weight'] = 23 : NULL;
 
     // Display submit button on the last step.
@@ -309,7 +309,9 @@ function field_group_ajaxified_multipage_form_alter(&$form, &$form_state, $form_
 
     if ($step != count($page_group['children']) && $page_group['format_settings']['move_button']) {
       unset($form['actions']['submit']);
-      unset($form['actions']['preview']);
+      if (isset($form['actions']['preview'])) {
+        unset($form['actions']['preview']);
+      }
     }
 
     // This simply allows us to demonstrate no-javascript use without

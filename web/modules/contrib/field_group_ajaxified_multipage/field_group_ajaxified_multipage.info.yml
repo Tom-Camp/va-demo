@@ -6,8 +6,8 @@ package: Fields
 dependencies:
   - field_group:field_group
 
-# Information added by Drupal.org packaging script on 2018-01-24
-version: '8.x-1.0-alpha1'
+# Information added by Drupal.org packaging script on 2018-05-14
+version: '8.x-1.0'
 core: '8.x'
 project: 'field_group_ajaxified_multipage'
-datestamp: 1516807987
+datestamp: 1526311984

@@ -7,3 +7,6 @@ web/sites/default/settings.local.php
 web/themes/custom/femagrants/assets/dist
 tests/accessibility/.*
 tests/visual/.config
+
+# PHPStorm project files
+.idea
