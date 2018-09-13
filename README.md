@@ -1,4 +1,44 @@
-# FEMA SF-425 Prototype
+## Demo requirements
+
+| Name | Value |
+| --- | --- |
+| Publicly-accessible URL to prototype |  https://drupal.va.demonow.io |
+| Checksum hash pointing to the revision to be evaluated on the `master` branch | TODO |
+| URL to a private administrative panel for the CMS portion of the prototype | https://drupal.va.demonow.io/admin/ |
+
+### Helpful links:
+
+- TODO: Link to **design/research** artifacts directory
+- TODO: Link to **content** artifacts directory
+
+## Repo structure
+
+```
+├── bin
+├── config
+├── deploy
+├── docs                     Design and technical documentation
+├── drush
+├── files-private
+├── scripts
+│   └── composer
+├── tests
+│   ├── accessibility
+│   ├── bdd
+│   ├── security
+│   └── visual
+└── web
+    ├── core
+    ├── libraries
+    ├── modules
+    ├── profiles
+    ├── sites
+    └── themes
+        ├── contrib
+        │   └── uswds
+        └── custom
+            └── vademo       Custom Drupal theme code
+```
 
 ## Requirements
 
@@ -13,8 +53,8 @@
 Run the following:
 
 ```
-git clone https://github.com/CivicActions/fema-grants.git
-cd fema-grants
+git clone https://github.com/CivicActions/va-demo
+cd va-demo
 docker-compose up -d
 ```
 
@@ -43,8 +83,20 @@ docker-compose rm -f
 docker-compose up -d
 ```
 
-## Starting work
+## Using the site
+Public site URL: https://drupal.va.demonow.io
 
+### Site login credentials
+
+Administrative username (Drupal User/1): **admin** 
+
+Password: **teamagile6**
+
+VA.GOV administrator: **va.gov-modernization** 
+
+Password: **teamagile6**
+
+## Starting work
 If you start work on a new change you will need to pull code from git and also sync your local database with the current configuration files. To do this:
 
 ```
@@ -60,10 +112,10 @@ Always create a new branch to work on each user story or change.
 ### After you've done your coding work
 
 * Make sure you export any configuration changes you've made to ensure that what you've done on your machine can be replicated on other machines. Do this by running `drush -y config:export` and commit those results before you submit your pull-request.
-* If you have made changes to sample content or entity structures you should also update the sample content by running `drush dcem fema_federal_financial_report` and committing those results. It is expected that some timestamps will be updated when doing this.
+* If you have made changes to sample content or entity structures you should also update the sample content by running `drush dcem va-demo` and committing those results. It is expected that some timestamps will be updated when doing this.
 * If you have added sample content look up the entity uuids for your new content:  `drush sqlq 'SELECT nid, uuid FROM node;'` , then
-*  Add the UUIDs associated with the new NIDs to `web/modules/custom/fema_federal_financial_report/fema_federal_financial_report.info.yml` 
-* Run `drush dcem fema_federal_financial_report` and commit those results.
+*  Add the UUIDs associated with the new NIDs to `web/modules/custom/va-demo/va-demo.info.yml`
+* Run `drush dcem va-demo` and commit those results.
 * Not sure if all your changes work? Test your work by recreating your sandbox with your current code (see above).
 
 ## Testing
@@ -120,13 +172,13 @@ zap
 Edit the Dockerfile, then rebuild using:
 
 ```
-docker build -t fema-grants .
+docker build -t va-demo .
 ```
 
 To test the image locally, create a docker-compose.override.yml file using:
 
 ```
-echo -e 'version: "3"\nservices:\n  web:\n    image: fema-grants' > docker-compose.override.yml
+echo -e 'version: "3"\nservices:\n  web:\n    image: va-demo' > docker-compose.override.yml
 docker-compose stop
 docker-compose rm -f
 docker-compose up -d

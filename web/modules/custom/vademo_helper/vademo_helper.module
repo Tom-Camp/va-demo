@@ -1,0 +1,23 @@
+<?php
+
+/**
+ * @file
+ * Contains vademo_helper.module.
+ */
+
+use Drupal\Core\Routing\RouteMatchInterface;
+
+/**
+ * Implements hook_help().
+ */
+function vademo_helper_help($route_name, RouteMatchInterface $route_match) {
+  switch ($route_name) {
+    case 'help.page.vademo_helper':
+      $output = '';
+      $output .= '<h3>' . t('About') . '</h3>';
+      $output .= '<p>' . t('Va Demo') . '</p>';
+      return $output;
+
+    default:
+  }
+}
