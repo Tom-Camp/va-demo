@@ -1,0 +1,13 @@
+name: 'VAHelperDemo'
+type: module
+description: 'VA Helper Demo'
+core: 8.x
+package: 'Custom'
+
+default_content:
+  node:
+    - f9256bf1-93bc-4f9f-a008-3a4ad36b8887
+  user:
+    - 4f4dc99a-e9fd-448b-bca8-c205da565ab5
+    - 87f97195-f131-4f73-9e35-4b30caf3d8c3
+    - 47a495d2-d150-40bf-bea6-ba558e1bdaa2
